@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TAREA_01.MainPage"
+             >
+             
+
+    
+    <Frame Padding="20" Margin="20" BackgroundColor="#FFF4F4F4" CornerRadius="20" HasShadow="True">
+        <ScrollView>
+
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25">
+                <Label Text="Color Maker"
+                    FontSize="24"
+                    HorizontalOptions="Center" 
+                    FontAttributes="Bold"/>
+
+                <Label Text="Red Value:" />
+                <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="OnSliderChanged"/>
+                
+                <Label Text="Green Value:" />
+                <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="OnSliderChanged"/>
+
+                <Label Text="Blue Value:" />
+                <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="OnSliderChanged"/>
+
+                <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label x:Name="HexLabel" Text="#FFFFFF" FontAttributes="Bold" />
+                    <BoxView x:Name="ColorPreview" WidthRequest="30" HeightRequest="30" CornerRadius="15"/>
+                </StackLayout>
+
+                <Button Text="Generate Random Color"
+                        Clicked="OnRandomColorClicked"
+                        BackgroundColor="#F8D3E5"
+                        TextColor="Black"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Frame>
+</ContentPage>
