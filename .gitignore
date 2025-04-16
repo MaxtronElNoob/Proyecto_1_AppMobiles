@@ -1,90 +1,36 @@
-# ----------------------------- 
-# .NET / Visual Studio / MAUI
-# -----------------------------
-
-# Build Results
+# .NET Maui general ignores
 bin/
 obj/
-
-# User-specific files
-*.user
+*.userprefs
 *.userosscache
 *.suo
-*.sln.docstates
+*.user
+*.user.*
 *.sln
 
-# Visual Studio Code
-.vscode/
-
-# Rider
-.idea/
-*.sln.iml
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-desktop.ini
-
-# Android
-**/platforms/android/app/build/
-**/platforms/android/.gradle/
-**/platforms/android/.idea/
-**/platforms/android/local.properties
-**/platforms/android/.settings/
-
-# iOS
-**/platforms/ios/build/
-**/platforms/ios/Pods/
-**/platforms/ios/DerivedData/
-
-# MAUI specific artifacts
-**/Platforms/Android/obj/
-**/Platforms/Android/bin/
-**/Platforms/iOS/obj/
-**/Platforms/iOS/bin/
-**/Platforms/MacCatalyst/obj/
-**/Platforms/MacCatalyst/bin/
-**/Platforms/Windows/obj/
-**/Platforms/Windows/bin/
-**/Resources/**/*.designer.cs
-
-# NuGet Packages
-*.nupkg
-*.snupkg
-.nuget/
-packages/
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# Local development secrets
-secrets.json
-
-# Logs
-*.log
-
-# Resharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
-
-# JetBrains Rider
-.idea/
-
-# Temporary files
-*.tmp
-*.bak
-*.old
-
-# Tizen
-bin.tizen/
-obj.tizen/
-
-# Other
+# Android specific ignores
 *.apk
-*.aab
-*.ipa
+*.ap_
+*.dex
+*.class
+*.log
+*.keystore
+*.jks
+*.cscfg
+*.csproj.user
+*.db
+*.db-shm
+*.db-wal
+.idea/
+.gradle/
+build/
+local.properties
+.externalNativeBuild/
 
-# Optional: exclude test result files
-TestResults/
+# Visual Studio specific ignores
+.vs/
+.vscode/
+*.vsconfig
+
+# macOS specific ignores
+.DS_Store
