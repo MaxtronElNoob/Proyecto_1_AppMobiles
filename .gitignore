@@ -1,36 +1,90 @@
-# .NET Maui general ignores
+# ----------------------------- 
+# .NET / Visual Studio / MAUI
+# -----------------------------
+
+# Build Results
 bin/
 obj/
-*.userprefs
+
+# User-specific files
+*.user
 *.userosscache
 *.suo
-*.user
-*.user.*
+*.sln.docstates
 *.sln
 
-# Android specific ignores
-*.apk
-*.ap_
-*.dex
-*.class
-*.log
-*.keystore
-*.jks
-*.cscfg
-*.csproj.user
-*.db
-*.db-shm
-*.db-wal
-.idea/
-.gradle/
-build/
-local.properties
-.externalNativeBuild/
-
-# Visual Studio specific ignores
-.vs/
+# Visual Studio Code
 .vscode/
-*.vsconfig
 
-# macOS specific ignores
+# Rider
+.idea/
+*.sln.iml
+
+# macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Android
+**/platforms/android/app/build/
+**/platforms/android/.gradle/
+**/platforms/android/.idea/
+**/platforms/android/local.properties
+**/platforms/android/.settings/
+
+# iOS
+**/platforms/ios/build/
+**/platforms/ios/Pods/
+**/platforms/ios/DerivedData/
+
+# MAUI specific artifacts
+**/Platforms/Android/obj/
+**/Platforms/Android/bin/
+**/Platforms/iOS/obj/
+**/Platforms/iOS/bin/
+**/Platforms/MacCatalyst/obj/
+**/Platforms/MacCatalyst/bin/
+**/Platforms/Windows/obj/
+**/Platforms/Windows/bin/
+**/Resources/**/*.designer.cs
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Local development secrets
+secrets.json
+
+# Logs
+*.log
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# JetBrains Rider
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# Tizen
+bin.tizen/
+obj.tizen/
+
+# Other
+*.apk
+*.aab
+*.ipa
+
+# Optional: exclude test result files
+TestResults/
