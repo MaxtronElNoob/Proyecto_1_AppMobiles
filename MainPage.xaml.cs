@@ -1,9 +1,7 @@
-﻿namespace TAREA_01;
-
+﻿using Android.Widget;
+namespace TAREA_01;
 public partial class MainPage : ContentPage
 {
-	// int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -29,9 +27,14 @@ public partial class MainPage : ContentPage
         int b = (int)BlueSlider.Value;
 
         Color newColor = Color.FromRgb(r, g, b);
-        ColorPreview.Color = newColor;
-        HexLabel.Text = $"#{r:X2}{g:X2}{b:X2}";
-		this.BackgroundColor = newColor;
+        // ColorPreview.BackgroundColor = newColor;
+        // ClipBoardButton.Text = $"#{r:X2}{g:X2}{b:X2}";
+        ClipBoardButton.Text = newColor.ToArgbHex(false);
+		BackgroundColor = newColor;
+    }
+    private async void ClipBoardSetter(object sender, EventArgs e){
+        await Clipboard.Default.SetTextAsync(ClipBoardButton.Text);
+        await DisplayAlert("Alert", "Hex Value Has been copied to your clipboard", "OK");
     }
 }
 
