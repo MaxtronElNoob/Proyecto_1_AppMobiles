@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TAREA_01.MainPage" >
     <Frame Padding="20" Margin="20" BackgroundColor="#FFF4F4F4" CornerRadius="20" HasShadow="True">
         <ScrollView>
-            <VerticalStackLayout Padding="30,0" Spacing="25">
+            <VerticalStackLayout Padding="10,0" Spacing="25">
                 <Label Text="Color Maker" FontSize="24" HorizontalOptions="Center" FontAttributes="Bold"/>
 
                 <Label Text="Red Value:" />
@@ -13,7 +13,7 @@
 
                 <Label Text="Blue Value:" />
                 <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="OnSliderChanged"/>
-                <Button Text="Copy to ClipBoard" BorderColor="Gray" BorderWidth="1" BackgroundColor="#00F0F8FF" TextColor="Black" Clicked="ClipBoardSetter" x:Name="ClipBoardButton"/>
+                <Button Text="Copy to ClipBoard" BorderColor="LightGray" BorderWidth="1" BackgroundColor="#00F0F8FF" TextColor="Black" Clicked="ClipBoardSetter" x:Name="ClipBoardButton"/>
                 <!-- <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
                     <Label x:Name="HexLabel" Text="HEX Value: #FFFFFF" FontAttributes="Bold" />
                     <Ellipse x:Name="ColorPreview" WidthRequest="30" HeightRequest="30"/>
