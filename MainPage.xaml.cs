@@ -1,17 +1,18 @@
 ﻿namespace TAREA_01;
+using CommunityToolkit.Maui.Alerts;
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-		UpdateColor(); // inicializar al cargar
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+        UpdateColor(); // inicializar al cargar
+    }
 
-	private void OnSliderChanged(object sender, ValueChangedEventArgs e)
+    private void OnSliderChanged(object sender, ValueChangedEventArgs e)
     {
         UpdateColor();
     }
-	private void OnRandomColorClicked(object sender, EventArgs e)
+    private void OnRandomColorClicked(object sender, EventArgs e)
     {
         var rand = new Random();
         RedSlider.Value = rand.Next(0, 256);
@@ -19,7 +20,7 @@ public partial class MainPage : ContentPage
         BlueSlider.Value = rand.Next(0, 256);
     }
 
-	private void UpdateColor()
+    private void UpdateColor()
     {
         int r = (int)RedSlider.Value;
         int g = (int)GreenSlider.Value;
@@ -27,11 +28,17 @@ public partial class MainPage : ContentPage
 
         Color newColor = Color.FromRgb(r, g, b);
         ClipBoardButton.Text = newColor.ToArgbHex(false);
-		BackgroundColor = newColor;
+        BackgroundColor = newColor;
     }
-    private async void ClipBoardSetter(object sender, EventArgs e){
+    private async void ShowSnackbar()
+    {
+        var snackbar = Snackbar.Make("Hex Value Has been copied to your clipboard", duration: TimeSpan.FromSeconds(3));
+        await snackbar.Show();
+    }
+    private async void ClipBoardSetter(object sender, EventArgs e)
+    {
         await Clipboard.Default.SetTextAsync(ClipBoardButton.Text); // Copia del Hex en el portapapeles
-        await DisplayAlert("Alert", "Hex Value Has been copied to your clipboard", "OK"); //mensaje de Alerta de copia en portapapeles
+        ShowSnackbar();
     }
 }
 

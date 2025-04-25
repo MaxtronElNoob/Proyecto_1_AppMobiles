@@ -34,3 +34,5 @@ local.properties
 
 # macOS specific ignores
 .DS_Store
+
+.fake
