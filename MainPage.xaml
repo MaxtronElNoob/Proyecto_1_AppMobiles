@@ -40,10 +40,7 @@
                         Clicked="ClipBoardSetter"
                         x:Name="ClipBoardButton"
                         ImageSource="content_copy.png"/>
-                <!-- <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
-                    <Label x:Name="HexLabel" Text="HEX Value: #FFFFFF" FontAttributes="Bold" />
-                    <Ellipse x:Name="ColorPreview" WidthRequest="30" HeightRequest="30"/>
-                </StackLayout> -->
+
 
                 <Button Text="Generate Random Color"
                         Clicked="OnRandomColorClicked"
